@@ -28,7 +28,7 @@ import numpy as np
 import json
 import requests
 from io import BytesIO
-from azure.storage.blob import BlobServiceClient
+#from azure.storage.blob import BlobServiceClient
 import re
 import time
 import pytesseract
@@ -37,8 +37,8 @@ import base64
 from datetime import datetime
 
 
-blob_connection =  os.environ['BLOB_CONNECTION_STRING']
-container = os.environ['CONTAINER']
+#blob_connection =  os.environ['BLOB_CONNECTION_STRING']
+#container = os.environ['CONTAINER']
 
 ## Function Entry Point
 def main(req: func.HttpRequest) -> func.HttpResponse:
@@ -53,7 +53,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         debug = (req.params.get('debug')=="True")
 
     if 'circles' in req.params:
-        circles = int(req.params.get('debug'))
+        circles = int(req.params.get('circles'))
 
     logging.info("Debug: %s" % str(debug))
     logging.info("Circle Param: %s" % str(max_circle_ocr))
