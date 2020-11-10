@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name = "cd-pid",
+    name = "diagramprep",
     author = "Jonathan Scholtes",
     author_email = "Jonathan.Sholtes@Microsoft.com",
     version = "0.1",
